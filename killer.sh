@@ -7,7 +7,7 @@ function stopall {
 
 function killer {
   trap stopall SIGINT SIGTERM
-  while /bin/true ; do
+  while $(which true) ; do
     sleep 600
     if [ -n "$STOP" ]; then
       break

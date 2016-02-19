@@ -56,7 +56,7 @@ function run_raw_tests {
 }
 
 
-#while /bin/true; do
+#while $(which true); do
   run_ws_tests &
   run_ws_tests &
   run_ws_tests &
