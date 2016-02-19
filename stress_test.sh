@@ -25,7 +25,7 @@ function run_cmd_tests {
   X=0
   while [ $X -lt $COUNT ]; do
      X=$[$X + 1]
-     ts=$(date --utc +%Y%m%dT%H:%M:%S.%N)
+     ts=$(date -u +%Y%m%dT%H:%M:%S.%N)
      tmpfile=stress_test_results/${kind}/${kind}.${ts}
      ts_start=$(date +%s)
      $cmd >> ${tmpfile} 2>&1
